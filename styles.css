@@ -1,0 +1,218 @@
+/*--- Base Styles ---*/
+
+
+body {
+    margin: 0;
+    background-image: url(img/islamic_wallpaper_3.jpeg);
+    background-size: cover;
+}
+
+
+/*--- Font Families ---*/
+
+
+@font-face {font-family: "RozhaOne-Regular"; src: url("fonts/RozhaOne-Regular.ttf"); }
+@font-face {font-family: "Oswald-Light"; src: url("fonts/Oswald-Light.ttf"); }
+
+
+/*--- Landing Page Styles ---*/
+
+
+#menu_bar {
+    display: flex;
+    flex-direction: column;
+    background-color: #07c3c0;
+    outline: 4px solid #cdf7f6;
+    border-bottom: 2px solid #252a34;
+    width: 100%;
+}
+
+#menu_options {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    text-align: center;
+}
+
+#menu_options li:first-child {
+    font-family: RozhaOne-Regular;
+    font-size: 24px;
+}
+
+#menu_options li {
+    padding-bottom: 6px;
+    font-family: Oswald-Light;
+    font-size: 21px;
+}
+
+.menu_anchors {
+    text-decoration: none;
+    color: inherit;
+}
+
+#about_us,
+#personal_development,
+#resources {
+    margin-top: 50vh;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding: 18px 18px;
+    background-color: #06adab;
+    color: white;
+    border-radius: 25px;
+    border: 1px solid #252a34;
+    box-shadow:
+    0 0 0 2px hsl(220, 4%, 50%),
+    0 0 0 4px hsl(220, 4%, 83%);
+}
+
+#about_us h1,
+#personal_development h1,
+#resources h1 {
+    font-family: RozhaOne-Regular;
+    font-weight: normal;
+    text-align: center;
+}
+
+#about_us p,
+#personal_development p,
+#resources p {
+    font-family: Oswald-Light;
+}
+
+#about_us p {
+    text-align: justify;
+}
+
+#suhba_calendar {
+    border-radius: 25px;
+}
+
+#personal_development h2 {
+    font-family: Oswald-Light;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.personal_dev_links a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.personal_dev_links a:hover {
+    color: #975e60;
+    background-color: #feced0;
+}
+
+.personal_dev_links a::before {
+    content: url(https://cdn.glitch.com/32e1cede-2c77-4515-9044-e18d39aef0d7%2Fadobeacrobatreader.svg?v=1596566819975);
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+@media (min-width: 699px) {
+
+#menu_bar {
+    display: flex;
+    background-color: #07c3c0;
+    outline: 4px solid #cdf7f6;
+    border-bottom: 2px solid #252a34;
+    width: 100%;
+}
+
+#menu_options {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+#menu_options li:first-child {
+    padding-right: 50px;
+    font-family: RozhaOne-Regular;
+    font-size: 24px;
+}
+
+#menu_options li {
+    padding-right: 12px;
+    font-family: Oswald-Light;
+    font-size: 21px;
+}
+
+.menu_anchors {
+    text-decoration: none;
+    color: inherit;
+}
+
+#about_us,
+#personal_development,
+#resources {
+    margin-top: 50vh;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 18px 18px;
+    background-color: #06adab;
+    color: white;
+    border-radius: 25px;
+    border: 1px solid #252a34;
+    box-shadow:
+    0 0 0 2px hsl(220, 4%, 50%),
+    0 0 0 4px hsl(220, 4%, 83%);
+}
+
+#about_us h1,
+#personal_development h1,
+#resources h1 {
+    font-family: RozhaOne-Regular;
+    font-weight: normal;
+    text-align: center;
+}
+
+#about_us p,
+#personal_development p,
+#resources p {
+    font-family: Oswald-Light;
+}
+
+#about_us p {
+    text-align: justify;
+}
+
+#suhba_calendar {
+    border-radius: 25px;
+}
+
+#personal_development h2 {
+    font-family: Oswald-Light;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.personal_dev_links a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.personal_dev_links a:hover {
+    color: #975e60;
+    background-color: #feced0;
+}
+
+.personal_dev_links a::before {
+    content: url(https://cdn.glitch.com/32e1cede-2c77-4515-9044-e18d39aef0d7%2Fadobeacrobatreader.svg?v=1596566819975);
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+}
+
+}
