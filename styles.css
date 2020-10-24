@@ -3,16 +3,17 @@
 
 body {
     margin: 0;
-    background-image: url(img/islamic_wallpaper_3.jpeg);
-    background-size: cover;
+    background-image: url(https://cdn.glitch.com/32e1cede-2c77-4515-9044-e18d39aef0d7%2Fislamic_wallpaper_1_483x1200.jpg?v=1599637046264);
+    background-size: contain;
 }
 
 
 /*--- Font Families ---*/
 
 
-@font-face {font-family: "RozhaOne-Regular"; src: url("fonts/RozhaOne-Regular.ttf"); }
-@font-face {font-family: "Oswald-Light"; src: url("fonts/Oswald-Light.ttf"); }
+@font-face {font-family: "RozhaOne-Regular"; src: url("https://cdn.glitch.com/32e1cede-2c77-4515-9044-e18d39aef0d7%2FRozhaOne-Regular.ttf?v=1599622917061"); }
+@font-face {font-family: "Oswald-Light"; src: url("https://cdn.glitch.com/32e1cede-2c77-4515-9044-e18d39aef0d7%2FOswald-Light.ttf?v=1599622919673"); }
+@font-face {font-family: "MarkaziText-Regular"; src: url("https://cdn.glitch.com/32e1cede-2c77-4515-9044-e18d39aef0d7%2FMarkaziText-Regular.ttf?v=1599844213035")}
 
 
 /*--- Landing Page Styles ---*/
@@ -33,6 +34,7 @@ body {
     flex-direction: column;
     list-style-type: none;
     text-align: center;
+    padding-left: 0;
 }
 
 #menu_options li:first-child {
@@ -51,16 +53,38 @@ body {
     color: inherit;
 }
 
+.banner {
+  background-color: #f56a79;
+  color: white;
+  border: 1px solid #252a34;
+  box-shadow:
+    0 0 0 2px hsl(220, 4%, 50%),
+    0 0 0 4px hsl(220, 4%, 83%);
+  margin-top: 6vh;
+  text-align: center;
+}
+
+.banner h1 {
+  font-family: RozhaOne-Regular;
+  font-weight: normal;
+}
+
+.banner p {
+  font-family: Oswald-Light
+}
+
 #about_us,
 #personal_development,
-#resources {
-    margin-top: 50vh;
+#resources,
+#photo_gallery,
+#project_work {
+    margin-top: 20vh;
     margin-left: 2.5%;
     margin-right: 2.5%;
     padding: 18px 18px;
     background-color: #06adab;
     color: white;
-    border-radius: 25px;
+    border-radius: 3px;
     border: 1px solid #252a34;
     box-shadow:
     0 0 0 2px hsl(220, 4%, 50%),
@@ -69,7 +93,9 @@ body {
 
 #about_us h1,
 #personal_development h1,
-#resources h1 {
+#resources h1,
+#photo_gallery h1,
+#project_work h1 {
     font-family: RozhaOne-Regular;
     font-weight: normal;
     text-align: center;
@@ -77,12 +103,20 @@ body {
 
 #about_us p,
 #personal_development p,
-#resources p {
+#resources p,
+#project_work p {
     font-family: Oswald-Light;
 }
 
 #about_us p {
     text-align: justify;
+}
+
+#arabic_text {
+  text-align: center !important;
+  font-size: 18px;
+  letter-spacing: 1.05px;
+  font-family: MarkaziText-Regular !important;
 }
 
 #suhba_calendar {
@@ -100,7 +134,27 @@ body {
     text-decoration: none;
 }
 
+.career_resume_links a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.islamic_knowledge_links a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .personal_dev_links a:hover {
+    color: #975e60;
+    background-color: #feced0;
+}
+
+.career_resume_links a:hover {
+    color: #975e60;
+    background-color: #feced0;
+}
+
+.islamic_knowledge_links a:hover {
     color: #975e60;
     background-color: #feced0;
 }
@@ -113,6 +167,180 @@ body {
     margin-right: 6px;
 }
 
+.career_resume_links a::before {
+    content: url(https://cdn.glitch.com/32e1cede-2c77-4515-9044-e18d39aef0d7%2Fmicrosoftpowerpoint.svg?v=1603512116667);
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+}
+
+.islamic_knowledge_links a::before {
+    content: url(https://cdn.glitch.com/32e1cede-2c77-4515-9044-e18d39aef0d7%2Fgooglechrome.svg?v=1603512773055);
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.column {
+    padding: 10px;
+}
+
+
+.column img {
+    opacity: 0.8;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
+
+
+.column img:hover {
+    opacity: 1;
+}
+
+
+.show_tell_container {
+    position: relative;
+    display: none;
+}
+
+
+#imgtext {
+    margin: 2% 0;
+    color: black;
+    font-size: 14px;
+    background: #e5e5e5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    font-family: Gayathri-Thin;
+}
+
+
+.closebtn {
+    position: absolute;
+    top: 36px;
+    right: 2px;
+    color: black;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+
+#expandedImg {
+    display: flex;
+    margin: 0 auto;
+}
+
+.accordionList{
+	width: 90%;
+  margin: 10px auto 10px auto;
+}
+
+.accordionList label {
+  padding: 5px 20px;
+  position: relative;
+	z-index: 20;
+	display: block;
+	height: 30px;
+	cursor: pointer;
+	color: white;
+	line-height: 33px;
+	font-size: 18px;
+  font-family: RozhaOne-Regular;
+  font-weight: normal;
+  text-align: center;
+	background: #035655;
+    border: .5px solid #252a34;
+    box-shadow:
+    0 0 0 1px hsl(220, 4%, 50%),
+    0 0 0 2px hsl(220, 4%, 83%);
+}
+
+.accordionList label:hover {
+  background: #82d6d5;
+  color: black;
+}
+
+.accordionList input:checked + label,
+.accordionList input:checked + label:hover{
+	background: #cdeeee;
+	color: black;
+	border: .5px solid #252a34;
+    box-shadow:
+    0 0 0 1px hsl(220, 4%, 50%),
+    0 0 0 2px hsl(220, 4%, 83%);
+}
+
+.accordionList input {
+	display: none;
+}
+
+.accordionList article {
+	background: #035655;
+	margin-top: -1px;
+	overflow: hidden;
+	height: 0px;
+	position: relative;
+	z-index: 10;
+	transition: 
+		height 0.3s ease-in-out, 
+		box-shadow 0.6s linear;
+}
+
+.accordionList input:checked ~ article {
+	transition: 
+		height 0.5s ease-in-out, 
+		box-shadow 0.1s linear;
+	box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+}
+
+.accordionList article p {
+	color: white;
+	line-height: 24px;
+	font-size: 0.95em;
+	padding: 20px;
+}
+
+.accordionList article p:last-child {
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.accordionList article strong {
+  color: #99cc99;
+}
+
+.accordionList img {
+  width: 70%;
+  height: 30%;
+  display: block;
+  margin: 0 auto;
+}
+
+.accordionList input:checked ~ article.ac-one {
+	height: 925px;
+}
+
 
 /* ================================= 
   Media Queries
@@ -121,6 +349,12 @@ body {
 
 @media (min-width: 699px) {
 
+body {
+    margin: 0;
+    background-image: url(https://cdn.glitch.com/32e1cede-2c77-4515-9044-e18d39aef0d7%2Fislamic_wallpaper_3.jpeg?v=1599622743220);
+    background-size: cover;
+}
+  
 #menu_bar {
     display: flex;
     background-color: #07c3c0;
@@ -134,6 +368,7 @@ body {
     display: flex;
     flex-direction: row;
     list-style-type: none;
+    padding-left: 20px;
 }
 
 #menu_options li:first-child {
@@ -152,17 +387,39 @@ body {
     text-decoration: none;
     color: inherit;
 }
+  
+.banner {
+  background-color: #f56a79;
+  color: white;
+  border: 1px solid #252a34;
+  box-shadow:
+    0 0 0 2px hsl(220, 4%, 50%),
+    0 0 0 4px hsl(220, 4%, 83%);
+  margin-top: 6vh;
+  text-align: center;
+}
+
+.banner h1 {
+  font-family: RozhaOne-Regular;
+  font-weight: normal;
+}
+
+.banner p {
+  font-family: Oswald-Light
+}
 
 #about_us,
 #personal_development,
-#resources {
-    margin-top: 50vh;
+#resources,
+#photo_gallery,
+#project_work {
+    margin-top: 15vh;
     margin-left: 25%;
     margin-right: 25%;
     padding: 18px 18px;
     background-color: #06adab;
     color: white;
-    border-radius: 25px;
+    border-radius: 3px;
     border: 1px solid #252a34;
     box-shadow:
     0 0 0 2px hsl(220, 4%, 50%),
@@ -171,7 +428,9 @@ body {
 
 #about_us h1,
 #personal_development h1,
-#resources h1 {
+#resources h1,
+#photo_gallery h1,
+#project_work h1 {
     font-family: RozhaOne-Regular;
     font-weight: normal;
     text-align: center;
@@ -179,7 +438,8 @@ body {
 
 #about_us p,
 #personal_development p,
-#resources p {
+#resources p,
+#project_work p {
     font-family: Oswald-Light;
 }
 
@@ -201,8 +461,28 @@ body {
     color: inherit;
     text-decoration: none;
 }
+  
+.career_resume_links a {
+    color: inherit;
+    text-decoration: none;
+}
+  
+.islamic_knowledge_links a {
+    color: inherit;
+    text-decoration: none;
+}
 
 .personal_dev_links a:hover {
+    color: #975e60;
+    background-color: #feced0;
+}
+  
+.career_resume_links a:hover {
+    color: #975e60;
+    background-color: #feced0;
+}
+  
+.islamic_knowledge_links a:hover {
     color: #975e60;
     background-color: #feced0;
 }
@@ -214,5 +494,182 @@ body {
     height: 14px;
     margin-right: 6px;
 }
+  
+.career_resume_links a::before {
+    content: url(https://cdn.glitch.com/32e1cede-2c77-4515-9044-e18d39aef0d7%2Fmicrosoftpowerpoint.svg?v=1603512116667);
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+}
+  
+.islamic_knowledge_links a::before {
+    content: url(https://cdn.glitch.com/32e1cede-2c77-4515-9044-e18d39aef0d7%2Fgooglechrome.svg?v=1603512773055);
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+}
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.column {
+    padding: 10px;
+}
+
+
+.column img {
+    opacity: 0.8;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
+
+
+.column img:hover {
+    opacity: 1;
+}
+
+
+.show_tell_container {
+    position: relative;
+    display: none;
+}
+
+
+#imgtext {
+    margin: 2% 0;
+    color: black;
+    font-size: 14px;
+    background: #e5e5e5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    font-family: Gayathri-Thin;
+}
+
+
+.closebtn {
+    position: absolute;
+    top: 50px;
+    right: 6.5px;
+    color: black;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+
+#expandedImg {
+    display: flex;
+    margin: 0 auto;
+}
+  
+
+#maidah {
+  text-align: center;
+}
+
+.accordionList{
+	width: 90%;
+  margin: 10px auto 10px auto;
+}
+
+.accordionList label {
+  padding: 5px 20px;
+  position: relative;
+	z-index: 20;
+	display: block;
+	height: 30px;
+	cursor: pointer;
+	color: white;
+	line-height: 33px;
+	font-size: 24px;
+  font-family: RozhaOne-Regular;
+  font-weight: normal;
+  text-align: center;
+	background: #035655;
+    border: .5px solid #252a34;
+    box-shadow:
+    0 0 0 1px hsl(220, 4%, 50%),
+    0 0 0 2px hsl(220, 4%, 83%);
+}
+
+.accordionList label:hover {
+  background: #82d6d5;
+  color: black;
+}
+
+.accordionList input:checked + label,
+.accordionList input:checked + label:hover{
+	background: #cdeeee;
+	color: black;
+	border: .5px solid #252a34;
+    box-shadow:
+    0 0 0 1px hsl(220, 4%, 50%),
+    0 0 0 2px hsl(220, 4%, 83%);
+}
+
+.accordionList input {
+	display: none;
+}
+
+.accordionList article {
+	background: #035655;
+	margin-top: -1px;
+	overflow: hidden;
+	height: 0px;
+	position: relative;
+	z-index: 10;
+	transition: 
+		height 0.3s ease-in-out, 
+		box-shadow 0.6s linear;
+}
+
+.accordionList input:checked ~ article {
+	transition: 
+		height 0.5s ease-in-out, 
+		box-shadow 0.1s linear;
+	box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+}
+
+.accordionList article p {
+	color: white;
+	line-height: 24px;
+	font-size: 0.95em;
+	padding: 20px;
+}
+
+.accordionList article p:last-child {
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.accordionList article strong {
+  color: #99cc99;
+}
+
+.accordionList img {
+  width: 70%;
+  height: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.accordionList input:checked ~ article.ac-one {
+	  height: 975px;
 }
