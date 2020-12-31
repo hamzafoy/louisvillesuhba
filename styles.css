@@ -341,6 +341,10 @@ body {
 	height: 925px;
 }
 
+.accordionList input:checked ~ article.ac-two {
+	height: 800px;
+}
+
 
 /* ================================= 
   Media Queries
@@ -672,4 +676,10 @@ body {
 
 .accordionList input:checked ~ article.ac-one {
 	  height: 975px;
+}
+  
+.accordionList input:checked ~ article.ac-two {
+height: 800px;
+}
+  
 }
